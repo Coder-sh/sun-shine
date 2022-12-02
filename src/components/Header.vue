@@ -23,7 +23,7 @@
             <RouterLink to="/">附近门店</RouterLink>
           </li>
           <li>
-            <RouterLink to="/service">客户服务</RouterLink>
+            <RouterLink to="/service/problem">客户服务</RouterLink>
           </li>
         </ul>
       </nav>

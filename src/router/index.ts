@@ -10,9 +10,19 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/service',
-      name: 'service',
-      component: () => import('../views/Service.vue')
+      path: '/service/problem',
+      name: 'problem',
+      component: () => import('../views/Problem.vue')
+    },
+    {
+      path: '/service/maintain',
+      name: 'maintain',
+      component: () => import('../views/Maintain.vue')
+    },
+    {
+      path: '/service/contact',
+      name: 'contact',
+      component: () => import('../views/Contact.vue')
     }
   ]
 })
