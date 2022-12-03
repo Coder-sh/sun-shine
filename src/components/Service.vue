@@ -20,7 +20,11 @@ const tabs = [
       <img src="@/assets/problem.png" alt="" />
       <div class="service-content">
         <p class="service-title">{{ title.zh }}</p>
-        <p class="service-en">{{ title.en }}</p>
+        <p class="service-en">
+          <div class="short_line"></div>
+          <span class="text_en">{{ title.en }}</span>
+          <div class="short_line"></div>
+        </p>
       </div>
     </div>
     <div class="service-tabs">
@@ -69,8 +73,22 @@ const tabs = [
       }
 
       .service-en {
-        font-size: 16px;
-        font-weight: 500;
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+
+        .short_line {
+          width: 30px;
+          height: 1px;
+          background-color: #a83042;
+        }
+
+        .text_en {
+          font-size: 16px;
+          font-weight: 500;
+          position: relative;
+          bottom: 1px;
+        }
       }
     }
   }

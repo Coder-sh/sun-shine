@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Autoplay, Pagination, A11y } from 'swiper'
+import { Autoplay, A11y } from 'swiper'
 import { getImagePath } from '@/utils/utils'
 import 'swiper/css'
 import 'swiper/css/pagination'

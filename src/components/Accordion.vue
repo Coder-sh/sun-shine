@@ -1,12 +1,14 @@
-<script setup lang="ts">
+<script setup lang="tsx">
 import { ref } from 'vue'
+import Vnode from '@/components/Vnode'
 
 withDefaults(defineProps<{
-  props: { title: string; content: string }
+  props: { title: string; content: any }
   showTopborder?: boolean
 }>(), {showTopborder: true})
 
 const isExpand = ref(false)
+
 </script>
 
 <template>
@@ -14,7 +16,7 @@ const isExpand = ref(false)
     <p
       class="title"
       @click="
-        () => {
+        () => { 
           isExpand = !isExpand
         }
       "
@@ -23,7 +25,9 @@ const isExpand = ref(false)
       {{ props.title }}
     <div :class="['arrow',  { arrow_down: isExpand }]"></div>
     </p>
-    <div class="content" v-show="isExpand">{{ props.content }}</div>
+    <div class="content" v-show="isExpand">
+      <Vnode :content="props.content" />
+    </div>
   </div>
 </template>
 
@@ -72,11 +76,13 @@ const isExpand = ref(false)
   }
 
   .content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    color: #333;
     overflow: hidden;
-    display: block;
     margin-top: 10px;
     font-size: 14px;
-    color: #666;
     padding: 0 60px;
     line-height: 24px;
   }

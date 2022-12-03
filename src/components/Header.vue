@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="header-wrap">
     <div class="header">
